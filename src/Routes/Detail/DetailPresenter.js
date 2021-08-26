@@ -1,3 +1,18 @@
-const detail = () => "Detail";
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-export default detail;
+const DetailPresenter = ({
+    result,
+    error,
+    loading
+}) => null;
+
+
+DetailPresenter.prototypes = ({
+    result: PropTypes.object,
+    loading: PropTypes.bool.isRequired,
+    error: PropTypes.string
+})
+
+export default DetailPresenter;
