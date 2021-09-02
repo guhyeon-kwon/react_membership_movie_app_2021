@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "../../Components/Section";
+import Loader from "../../Components/Loader";
 
 const Container = styled.div``;
 
@@ -11,7 +12,7 @@ const TVPresenter = ({
                          airingToday,
                          loading,
                          error
-                     }) => loading ? null :
+                     }) => loading ? <Loader /> :
     <Container>
         {topRated && topRated.length > 0 && (
             <Section title="Popular Shows">{topRated.map(show => show.name)}</Section>
